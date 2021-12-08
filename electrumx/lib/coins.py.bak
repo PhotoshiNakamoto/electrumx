@@ -90,8 +90,8 @@ class Coin:
     WIF_BYTE = bytes.fromhex("80")
     ENCODE_CHECK = Base58.encode_check
     DECODE_CHECK = Base58.decode_check
-    GENESIS_HASH = ('00000822f602da5be6bc6897ef266f71'
-                    '54f49249cbcf4d0994966ee7e73775a1')
+    GENESIS_HASH = ('000000000019d6689c085ae165831e93'
+                    '4ff763ae46a2a6c172b3f1b60a8ce26f')
     GENESIS_ACTIVATION = 100_000_000
     # Peer discovery
     PEER_DEFAULT_PORTS = {'t': '50001', 's': '50002'}
@@ -350,7 +350,7 @@ class BitcoinMixin:
     NET = "mainnet"
     XPUB_VERBYTES = bytes.fromhex("0488b21e")
     XPRV_VERBYTES = bytes.fromhex("0488ade4")
-    RPC_PORT = 8806
+    RPC_PORT = 8332
 
 
 class NameMixin:
@@ -629,7 +629,21 @@ class Bitcoin(BitcoinMixin, Coin):
     CRASH_CLIENT_VER = (3, 2, 3)
     BLACKLIST_URL = 'https://electrum.org/blacklist.json'
     PEERS = [
-
+        'electrum.vom-stausee.de s t',
+        'electrum.hsmiths.com s t',
+        'helicarrier.bauerj.eu s t',
+        'hsmiths4fyqlw5xw.onion s t',
+        'ozahtqwp25chjdjd.onion s t',
+        'electrum.hodlister.co s',
+        'electrum3.hodlister.co s',
+        'btc.usebsv.com s50006',
+        'fortress.qtornado.com s443 t',
+        'ecdsa.net s110 t',
+        'e2.keff.org s t',
+        'currentlane.lovebitco.in s t',
+        'electrum.jochen-hoenicke.de s50005 t50003',
+        'vps5.hsmiths.com s',
+        'electrum.emzy.de s',
     ]
 
     @classmethod
